@@ -17,6 +17,11 @@ namespace Damian1RacingEvent1
             get { return races; }
             set { races = value; }
         }
-
+        public void AddRace(Race race)
+        {
+            Races.Add(race);
+        }
+        public override void ListDetails() 
+        {}
     }
 }
