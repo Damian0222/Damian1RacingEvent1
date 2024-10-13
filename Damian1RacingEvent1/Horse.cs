@@ -31,7 +31,12 @@ namespace Damian1RacingEvent1
             set { dateOfBirth = value; }
         }
 
-
+        public Horse(string horseID, string name, DateTime dateOfBirth)
+        {
+            HorseID = horseID;
+            Name = name;
+            DateOfBirth = dateOfBirth;
+        }
 
 
     }
