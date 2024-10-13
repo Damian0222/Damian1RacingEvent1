@@ -38,6 +38,7 @@ namespace Damian1RacingEvent1
             DateOfBirth = dateOfBirth;
         }
 
-
+        public override string ToString() {
+            return $"{Name}(ID: {HorseID}, DOB: {DateOfBirth.ToShortDateString()}";
     }
 }
