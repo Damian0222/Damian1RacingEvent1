@@ -6,9 +6,7 @@
         {
             Console.WriteLine("Hello, World!");
 
-            test
-                fr
-                eed
+            
         }
     }
 }
