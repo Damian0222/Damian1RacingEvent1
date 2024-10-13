@@ -13,17 +13,17 @@ namespace Damian1RacingEvent1
         public string horseID;
         public string name;
         public DateTime dateOfBirth;
-        
+
         //setters and getters
         public string HorseID
         {
             get { return horseID; }
-            set { horseID = value;  }
+            set { horseID = value; }
         }
         public string Name
         {
-            get { return name;  }
-            set { name = value;  }
+            get { return name; }
+            set { name = value; }
         }
         public DateTime DateOfBirth
         {
@@ -38,7 +38,9 @@ namespace Damian1RacingEvent1
             DateOfBirth = dateOfBirth;
         }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             return $"{Name}(ID: {HorseID}, DOB: {DateOfBirth.ToShortDateString()}";
+        }
     }
 }
