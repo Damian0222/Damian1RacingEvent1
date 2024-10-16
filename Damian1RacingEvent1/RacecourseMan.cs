@@ -21,5 +21,19 @@ namespace Damian1RacingEvent1
             Console.WriteLine($"New event '{Ename}' has been created in '{eventloc}'.");
 
         }
-    }
-}
+
+        public void AddRaceeToE(List<RaceEvent> raceEv1)
+        {
+            if (raceEv1.Count == 0)
+            {
+                Console.WriteLine("No events created yet.");
+                return;
+            }
+                Console.WriteLine("Please select an event to add a race to:");
+            for (int i = 0; i < raceEv1.Count; i++)
+            {
+               Console.WriteLine($"{i+1}: {raceEv1[i].Name} at {raceEv1[i].Location}");
+            }
+
+
+        }
