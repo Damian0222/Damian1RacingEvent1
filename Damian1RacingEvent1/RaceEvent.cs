@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Damian1RacingEvent1
 {
-    class RaceEvent : Event
+    public class RaceEvent : Event
     {
 
         public List<Race> races = new List<Race>();
@@ -17,11 +17,9 @@ namespace Damian1RacingEvent1
             get { return races; }
             set { races = value; }
         }
-        public void AddRace(Race race)
+        public void AddRace(Race r)
         {
-            Races.Add(race);
+            Races.Add(r);
         }
-        public override void ListDetails() 
-        {}
     }
 }

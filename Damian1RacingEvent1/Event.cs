@@ -27,7 +27,7 @@ namespace Damian1RacingEvent1
             Location = location;
         }
 
-        public abstract void ListDetails();
+       // public abstract void ListR();
     }
 
 }

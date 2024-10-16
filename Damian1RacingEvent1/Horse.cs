@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Damian1RacingEvent1
 {
-    class Horse
+    public class Horse
     {
         public string horseID;
         public string name;
@@ -42,5 +42,17 @@ namespace Damian1RacingEvent1
         {
             return $"{Name}(ID: {HorseID}, DOB: {DateOfBirth.ToShortDateString()}";
         }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Horse horse &&
+                   horseID == horse.horseID &&
+                   name == horse.name &&
+                   dateOfBirth == horse.dateOfBirth &&
+                   HorseID == horse.HorseID &&
+                   Name == horse.Name &&
+                   DateOfBirth == horse.DateOfBirth;
+        }
     }
 }
+

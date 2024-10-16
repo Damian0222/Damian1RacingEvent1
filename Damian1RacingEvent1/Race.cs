@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Damian1RacingEvent1 { 
-  class Race
+ public class Race
 
   {
     public string name;
@@ -35,8 +35,28 @@ namespace Damian1RacingEvent1 {
             Name = name;
             StartTime = startTime;
         }
-       
-       }
 
+        public override string? ToString()
+        {
+            return base.ToString();
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Race race &&
+                   name == race.name &&
+                   startTime == race.startTime &&
+                   EqualityComparer<List<Horse>>.Default.Equals(horses, race.horses) &&
+                   Name == race.Name &&
+                   StartTime == race.StartTime &&
+                   EqualityComparer<List<Horse>>.Default.Equals(Horses, race.Horses);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(name, startTime, horses, Name, StartTime, Horses);
+        }
     }
+
+ }
 
