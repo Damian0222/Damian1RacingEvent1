@@ -21,5 +21,20 @@ namespace Damian1RacingEvent1
         {
             Races.Add(r);
         }
+
+        public void ListR()
+        {
+            if (Races.Count == 0)
+            {
+                Console.WriteLine("No races in this event!");
+            }
+            else
+            {
+                for(int i = 0; i < Races.Count; i++)
+                {
+                    Console.WriteLine($"{i + 1}. {Races[i].Name} (Start time: {Races[i].StartTime})");
+                }
+            }
+        }
     }
-}
+    }
