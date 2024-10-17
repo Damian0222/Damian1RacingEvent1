@@ -8,13 +8,15 @@ namespace Damian1RacingEvent1
         static List<RaceEvent> raceEvent = new List<RaceEvent>();
         static RacecourseMan Rmanager = new RacecourseMan();
         static Racegoer Rgoer = new Racegoer();
+        static HorseOwner Howner = new HorseOwner();
         static void Main(string[] args)
         {
             while (true)
             {
                 Console.WriteLine($"\nWelcome to the horse racing event!");
                 Console.WriteLine("1. Racecourse manager");
-                Console.WriteLine("2. Racecgoer");
+                Console.WriteLine("2. Race goer");
+                Console.WriteLine("3. Horse owner");
                 Console.WriteLine("Select your role: ");
                 string choice = Console.ReadLine(); ;
 
@@ -25,6 +27,9 @@ namespace Damian1RacingEvent1
                         break;
                     case "2":
                         RGoerMenu();
+                        break;
+                    case "3":
+                        Horseowner();
                         break;
                 }
             }
@@ -38,7 +43,7 @@ namespace Damian1RacingEvent1
                 Console.WriteLine("2. Add races to event");
                 Console.WriteLine("3. Add horses to a race");
                 Console.WriteLine("4. Back to main menu");
-                Console.Write("Enter your choice");
+                Console.Write("\nEnter your choice:");
                 string num = Console.ReadLine();
 
                 switch (num)
@@ -69,7 +74,7 @@ namespace Damian1RacingEvent1
                 Console.WriteLine("\nRacegoer Menu");
                 Console.WriteLine("1. View all upcoming events");
                 Console.WriteLine("2. Back to the main menu");
-                Console.Write("\nEnter your choice (1-2): ");
+                Console.Write("\nEnter your choice: ");
                 string choice = Console.ReadLine();
 
                 switch (choice)
@@ -78,12 +83,39 @@ namespace Damian1RacingEvent1
                         Rgoer.viewUpcomingEv(raceEvent);
                         break;
                     case "2":
-                        Rgoer.viewUpcomingEv(raceEvent);
+                        return;
+                    default:
+                        Console.WriteLine("Invalid! Please try again.");
                         break;
-                     return;
                 }
             }
         }
 
+        static void Horseowner()
+    {
+        while (true)
+        {
+            Console.WriteLine($"\nRacing event");
+            Console.WriteLine("\nRacegoer Menu");
+            Console.WriteLine("1. Add horses to a race);");
+            Console.WriteLine("2. Back to the main menu");
+            Console.Write("\nEnter your choice (1-2): ");
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                   Howner.AddhorsesToR1(raceEvent);
+                    break;
+                case "2":
+                     return;
+                  default:
+                 Console.WriteLine("Invalid! Please try again.");
+                        break;
+                }
+        }
     }
+
 }
+}
+
