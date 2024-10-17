@@ -28,15 +28,23 @@ namespace Damian1RacingEvent1
                     while (true)
                     {
                         Console.WriteLine("1. Create a new event");
+                        Console.WriteLine("2. Add races to event");
+                        Console.WriteLine("3. Add horses to a race");
                         Console.Write("Enter your choice");
-                        string num = Console.ReadLine();
+                string num = Console.ReadLine();
 
                         switch (num)
                         {
                             case "1":
                                 Rmanager.createRaceEv(raceEvent);
                                 break;
-                        }
+                            case "2":
+                                Rmanager.AddRaceeToE(raceEvent);
+                        break;
+                             case "3":
+                                Rmanager.AddhorsesToR(raceEvent);
+                        break;
+                }
                     }
                 }
             }
