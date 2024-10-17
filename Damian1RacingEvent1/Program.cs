@@ -23,6 +23,9 @@ namespace Damian1RacingEvent1
                     case "1":
                         RmanagerMenu();
                         break;
+                    case "2":
+                        RGoerMenu();
+                        break;
                 }
             }
         }
@@ -30,9 +33,11 @@ namespace Damian1RacingEvent1
         {
             while (true)
             {
+                Console.WriteLine($"\nRacing event");
                 Console.WriteLine("1. Create a new event");
                 Console.WriteLine("2. Add races to event");
                 Console.WriteLine("3. Add horses to a race");
+                Console.WriteLine("4. Back to main menu");
                 Console.Write("Enter your choice");
                 string num = Console.ReadLine();
 
@@ -47,6 +52,12 @@ namespace Damian1RacingEvent1
                     case "3":
                         Rmanager.AddhorsesToR(raceEvent);
                         break;
+                    case "4":
+                        return;
+                    default:
+                        Console.WriteLine("Invalid! Please try again.");
+                        break;
+
                 }
             }
         }
@@ -54,9 +65,10 @@ namespace Damian1RacingEvent1
         {
             while (true)
             {
-
+                Console.WriteLine($"\nRacing event");
                 Console.WriteLine("\nRacegoer Menu");
                 Console.WriteLine("1. View all upcoming events");
+                Console.WriteLine("2. Back to the main menu");
                 Console.Write("\nEnter your choice (1-2): ");
                 string choice = Console.ReadLine();
 
@@ -65,6 +77,10 @@ namespace Damian1RacingEvent1
                     case "1":
                         Rgoer.viewUpcomingEv(raceEvent);
                         break;
+                    case "2":
+                        Rgoer.viewUpcomingEv(raceEvent);
+                        break;
+                     return;
                 }
             }
         }

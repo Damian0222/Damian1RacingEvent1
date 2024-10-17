@@ -76,7 +76,7 @@ namespace Damian1RacingEvent1
             }
             int racePos = int.Parse(Console.ReadLine()) - 1;
             Race uChoice = events.Races[racePos];
-            Console.WriteLine("ID");
+            Console.WriteLine("ID:");
             string h1 = Console.ReadLine();
             Console.WriteLine("Name");
             string h2 = Console.ReadLine();
@@ -85,7 +85,7 @@ namespace Damian1RacingEvent1
 
             Horse newH = new Horse(h1, h2, h3);
             uChoice.AddHorse(newH);
-            Console.WriteLine($"Horse {newH.Name} has been added to the race {uChoice.Name}.");
+            Console.WriteLine($"Horse {newH.Name} has been added to {uChoice.Name}.");
 
 
 
