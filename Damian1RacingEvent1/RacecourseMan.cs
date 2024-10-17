@@ -24,7 +24,7 @@ namespace Damian1RacingEvent1
 
        
         
-        public void AddRaceeToE(List<RaceEvent> raceEv1)
+         public void AddRaceeToE(List<RaceEvent> raceEv1)
         {
             if (raceEv1.Count == 0)
             {
@@ -49,5 +49,22 @@ namespace Damian1RacingEvent1
 
         }
 
-    }
+
+        public void AddhorsesToR(List<RaceEvent> raceEv2)
+        {
+            if(raceEv2.Count == 0) {
+                Console.WriteLine("No events available here.");
+                return;
+        }
+            Console.WriteLine("Select an event to add a horse  to:");
+            for (int i = 0;i < raceEv2.Count;i++)
+            {
+               Console.WriteLine($"{i + 1}. {raceEv2[i].Name} at {raceEv2[i].Location}");
+            }
+            int eventPos = int.Parse(Console.ReadLine()) - 1;
+            RaceEvent events = raceEv2[eventPos];
+            if (events.races.Count  == 0) {
+                Console.WriteLine("No race");
+                return;
+
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,21 +39,9 @@ namespace Damian1RacingEvent1
             DateOfBirth = dateOfBirth;
         }
 
-        public override string ToString()
-        {
-            return $"{Name}(ID: {HorseID}, DOB: {DateOfBirth.ToShortDateString()}";
-        }
-
-        public override bool Equals(object? obj)
-        {
-            return obj is Horse horse &&
-                   horseID == horse.horseID &&
-                   name == horse.name &&
-                   dateOfBirth == horse.dateOfBirth &&
-                   HorseID == horse.HorseID &&
-                   Name == horse.Name &&
-                   DateOfBirth == horse.DateOfBirth;
-        }
     }
 }
+
+
+
 
