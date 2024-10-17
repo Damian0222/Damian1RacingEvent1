@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Runtime.Intrinsics.X86;
 using System.Xml.Serialization;
 
 namespace Damian1RacingEvent1
@@ -9,11 +10,14 @@ namespace Damian1RacingEvent1
         static RacecourseMan Rmanager = new RacecourseMan();
         static Racegoer Rgoer = new Racegoer();
         static HorseOwner Howner = new HorseOwner();
+        static string User1;
+       
         static void Main(string[] args)
         {
+           user();
             while (true)
             {
-                Console.WriteLine($"\nWelcome to the horse racing event!");
+                Console.WriteLine($"\nWelcome To The Racing Event!");
                 Console.WriteLine("1. Racecourse manager");
                 Console.WriteLine("2. Race goer");
                 Console.WriteLine("3. Horse owner");
@@ -23,7 +27,7 @@ namespace Damian1RacingEvent1
                 switch (choice)
                 {
                     case "1":
-                        RmanagerMenu();
+                        RmanagerMenu(); 
                         break;
                     case "2":
                         RGoerMenu();
@@ -38,10 +42,10 @@ namespace Damian1RacingEvent1
         {
             while (true)
             {
-                Console.WriteLine($"\nRacing event");
-                Console.WriteLine("1. Create a new event");
-                Console.WriteLine("2. Add races to event");
-                Console.WriteLine("3. Add horses to a race");
+                Console.WriteLine("\nWelcome To The Race Manager Menu!");
+                Console.WriteLine("1. Would you like to create a new event?");
+                Console.WriteLine("2. Would you like to add races to an event?");
+                Console.WriteLine("3. Would you like to add horses to a race?");
                 Console.WriteLine("4. Back to main menu");
                 Console.Write("\nEnter your choice:");
                 string num = Console.ReadLine();
@@ -70,8 +74,7 @@ namespace Damian1RacingEvent1
         {
             while (true)
             {
-                Console.WriteLine($"\nRacing event");
-                Console.WriteLine("\nRacegoer Menu");
+                Console.WriteLine("\nWelcome To The Race Goer Menu!");
                 Console.WriteLine("1. View all upcoming events");
                 Console.WriteLine("2. Back to the main menu");
                 Console.Write("\nEnter your choice: ");
@@ -95,8 +98,7 @@ namespace Damian1RacingEvent1
     {
         while (true)
         {
-            Console.WriteLine($"\nRacing event");
-            Console.WriteLine("\nRacegoer Menu");
+            Console.WriteLine("\nWelcome To The Horse Owner Menu!");
             Console.WriteLine("1. Add horses to a race);");
             Console.WriteLine("2. Back to the main menu");
             Console.Write("\nEnter your choice (1-2): ");
@@ -115,7 +117,30 @@ namespace Damian1RacingEvent1
                 }
         }
     }
+static void user()
+        {
+            string[] userInfo = File.ReadAllLines("C:\\CollegeY3\\Frameworks\\Damian1RacingEvent1\\Damian1RacingEvent1\\users.txt");
+            List<string> user = new List<string>();
 
+            Console.WriteLine("\nRACING EVENT SYSTEM: ");
+
+            foreach (string line in userInfo)
+            {
+                if (line.StartsWith("Please select User 1"))
+                {
+                    user.Add(line);
+                }
+            }
+            for (int i = 0; i < user.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {user[i]}");
+            }
+            Console.Write("\nEnter the number of the user on display: ");
+            int pos = int.Parse(Console.ReadLine()) - 1;
+
+            User1 = userInfo[pos + 1].Split(':')[1].Trim();
+            Console.WriteLine($"\nWelcome {User1} To Race Event Menu!");
+        }
 }
 }
 
