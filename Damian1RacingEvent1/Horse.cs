@@ -14,7 +14,7 @@ namespace Damian1RacingEvent1
         public string name;
         public DateTime dateOfBirth;
 
-        //setters and getters
+        //setters and getters, Constructorss
         public string HorseID
         {
             get { return horseID; }

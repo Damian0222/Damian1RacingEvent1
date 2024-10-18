@@ -8,6 +8,7 @@ namespace Damian1RacingEvent1
 {
     public abstract class Event
     {
+        //setters and getters, Constructorss
         public string name;
         public string location;
 

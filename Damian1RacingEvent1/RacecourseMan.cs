@@ -40,7 +40,7 @@ namespace Damian1RacingEvent1
 
             Console.Write("The name of the race: ");
             string raceName = Console.ReadLine();
-            Console.Write("Choose the start time (yyyy-mm-dd hh:mm");
+            Console.Write("Choose the start time (yyyy-mm-dd hh:mm)");
             DateTime raceStart = DateTime.Parse(Console.ReadLine());
             Race newR = new Race(raceName, raceStart);
             raceEv1[info].AddRace(newR);
@@ -90,6 +90,28 @@ namespace Damian1RacingEvent1
 
 
         }
-    }
+        //Extra functionality
+    public void removingHorseR(List<RaceEvent> raceEv4) {
+            {
+                Console.Write("Please enter the ID of the horse you want to be removed: ");
+                string ID = Console.ReadLine();
+                foreach (var raceE in raceEv4)
+                {
+                    foreach (var race in raceE.Races)
+                    {
+                        Horse Removes = race.Horses.FirstOrDefault(h => h.HorseID == ID);
+                        if (Removes != null)
+                        {
+                            race.Horses.Remove(Removes);
+                            Console.WriteLine($"Horse {Removes.Name} ID {ID} has been removed.");
+                            return;
+                        }
+                    }
+                }
 
+                Console.WriteLine($"Horse with ID {ID} not found.");
+            }
+
+        }
     }
+}

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Damian1RacingEvent1", "Damian1RacingEvent1\Damian1RacingEvent1.csproj", "{6D9DD588-A269-46E1-9239-BE5884489449}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Damian1RacingEvent1", "Damian1RacingEvent1\Damian1RacingEvent1.csproj", "{6D9DD588-A269-46E1-9239-BE5884489449}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Damian1RacingEvent1Tests", "Damian1RacingEvent1Tests\Damian1RacingEvent1Tests.csproj", "{F990E769-00D3-45D9-855F-DB19F044E0BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6D9DD588-A269-46E1-9239-BE5884489449}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D9DD588-A269-46E1-9239-BE5884489449}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D9DD588-A269-46E1-9239-BE5884489449}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F990E769-00D3-45D9-855F-DB19F044E0BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F990E769-00D3-45D9-855F-DB19F044E0BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F990E769-00D3-45D9-855F-DB19F044E0BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F990E769-00D3-45D9-855F-DB19F044E0BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

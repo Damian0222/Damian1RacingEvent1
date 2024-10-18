@@ -46,7 +46,8 @@ namespace Damian1RacingEvent1
                 Console.WriteLine("1. Would you like to create a new event?");
                 Console.WriteLine("2. Would you like to add races to an event?");
                 Console.WriteLine("3. Would you like to add horses to a race?");
-                Console.WriteLine("4. Back to main menu");
+                Console.WriteLine("4. Would you like to remove a horse?");
+                Console.WriteLine("5. Back to main menu");
                 Console.Write("\nEnter your choice:");
                 string num = Console.ReadLine();
 
@@ -62,11 +63,14 @@ namespace Damian1RacingEvent1
                         Rmanager.AddhorsesToR(raceEvent);
                         break;
                     case "4":
+                        Rmanager.removingHorseR(raceEvent);
+                        break;
+                    case "5":
                         return;
                     default:
                         Console.WriteLine("Invalid! Please try again.");
                         break;
-
+                  
                 }
             }
         }
